@@ -1,10 +1,10 @@
-package app.bola.docuguardai;
+package app.bola.esportsscoutingtool;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DocuguardaiApplicationTests {
+class EsportsScoutingToolApplicationTests {
 	
 	@Test
 	void contextLoads() {
