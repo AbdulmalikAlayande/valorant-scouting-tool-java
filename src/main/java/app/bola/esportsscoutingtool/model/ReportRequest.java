@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "report_requests")
 public class ReportRequest extends BaseModel {
     
     @Column(name = "user_prompt", nullable = false, columnDefinition = "TEXT")
