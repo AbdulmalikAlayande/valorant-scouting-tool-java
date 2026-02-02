@@ -34,5 +34,6 @@ build/
 
 ### Esport Scouting Generator Tool API ###
 !/src/main/resources/application-dev.properties
-!/src/main/resources/agent-reference
-!/src/main/resources/agent-reference/
+!/agent-reference
+!/agent-reference/
+/agent-reference
