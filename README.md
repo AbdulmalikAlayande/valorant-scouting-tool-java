@@ -1,1 +1,1 @@
-# docuguardai
+# Stratigen AI

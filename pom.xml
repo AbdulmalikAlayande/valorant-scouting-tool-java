@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>app.bola</groupId>
-    <artifactId>docuguardai</artifactId>
+    <artifactId>cloud9stratigenai</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>esportsscoutingtool</name>
-    <description>Valorant Esport General Purpose Scouting Tool.</description>
+    <name>cloud9stratigenai</name>
+    <description>Valorant Esport General Purpose Scouting Tool For Cloud9.</description>
     <url/>
     <licenses>
         <license/>
