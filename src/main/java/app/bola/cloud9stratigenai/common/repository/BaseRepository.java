@@ -1,6 +1,6 @@
-package app.bola.esportsscoutingtool.common.repository;
-import app.bola.esportsscoutingtool.common.model.BaseModel;
-import org.jspecify.annotations.NonNull;
+package app.bola.cloud9stratigenai.common.repository;
+import app.bola.cloud9stratigenai.common.model.BaseModel;
+import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
