@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateReportRequest {
+public class GenerateReportRequest {
     
     @NotBlank(message = "User prompt cannot be empty")
     @Size(min = 10, max = 500, message = "Prompt must be between 10 and 500 characters")
