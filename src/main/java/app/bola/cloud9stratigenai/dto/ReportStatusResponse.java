@@ -10,10 +10,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReportStatusResponse {
-    private Long requestId;
+    private String requestId;
+    private String error;
     private String status;
     private String message;
+    private Integer progress; // 0-100
+    private String currentStep;
     private LocalDateTime createdAt;
+    private Boolean reportAvailable;
     private LocalDateTime completedAt;
-    private String errorMessage;
 }
