@@ -9,13 +9,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
-@Slf4j
 public class GlobalExceptionHandler {
+    
+    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
     
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
@@ -29,6 +31,22 @@ public class GlobalExceptionHandler {
         
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
+	
+	@ExceptionHandler({ReportNotFoundException.class, ReportNotReadyException.class})
+	public ResponseEntity<ErrorResponse> handleAnnotatedExceptions(RuntimeException ex) {
+		HttpStatus status = getResponseStatus(ex);
+		return ResponseEntity
+				       .status(status)
+				       .body(new ErrorResponse(status.value(), ex.getMessage(), LocalDateTime.now()));
+	}
+
+	private HttpStatus getResponseStatus(Exception ex) {
+		ResponseStatus annotation = ex.getClass().getAnnotation(ResponseStatus.class);
+		if (annotation != null) {
+			return annotation.value();
+		}
+		return HttpStatus.INTERNAL_SERVER_ERROR;
+	}
     
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidationError(MethodArgumentNotValidException ex) {
