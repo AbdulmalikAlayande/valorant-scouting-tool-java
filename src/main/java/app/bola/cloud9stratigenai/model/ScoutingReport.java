@@ -1,8 +1,9 @@
-package app.bola.esportsscoutingtool.model;
+package app.bola.cloud9stratigenai.model;
 
+import app.bola.cloud9stratigenai.model.ReportRequest;
 import jakarta.persistence.Entity;
 
-import app.bola.esportsscoutingtool.common.model.BaseModel;
+import app.bola.cloud9stratigenai.common.model.BaseModel;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;

@@ -1,7 +1,7 @@
-package app.bola.esportsscoutingtool.repository;
+package app.bola.cloud9stratigenai.repository;
 
-import app.bola.esportsscoutingtool.common.repository.BaseRepository;
-import app.bola.esportsscoutingtool.model.ReportRequest;
+import app.bola.cloud9stratigenai.common.repository.BaseRepository;
+import app.bola.cloud9stratigenai.model.ReportRequest;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 

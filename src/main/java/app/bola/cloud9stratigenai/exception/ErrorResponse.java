@@ -1,4 +1,4 @@
-package app.bola.esportsscoutingtool.exception;
+package app.bola.cloud9stratigenai.exception;
 
 import lombok.*;
 import java.time.LocalDateTime;

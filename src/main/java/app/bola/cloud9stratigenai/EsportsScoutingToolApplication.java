@@ -1,4 +1,4 @@
-package app.bola.esportsscoutingtool;
+package app.bola.cloud9stratigenai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

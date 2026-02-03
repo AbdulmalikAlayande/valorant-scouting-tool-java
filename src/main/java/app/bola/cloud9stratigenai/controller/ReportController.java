@@ -1,8 +1,10 @@
-package app.bola.esportsscoutingtool.controller;
+package app.bola.cloud9stratigenai.controller;
 
-import app.bola.esportsscoutingtool.dto.ReportStatusResponse;
-import app.bola.esportsscoutingtool.dto.ScoutingReportResponse;
-import app.bola.esportsscoutingtool.service.ReportSubmissionService;
+import app.bola.cloud9stratigenai.dto.GenerateReportRequest;
+import app.bola.cloud9stratigenai.dto.ReportStatusResponse;
+import app.bola.cloud9stratigenai.dto.ScoutingReportResponse;
+import app.bola.cloud9stratigenai.service.ReportService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import org.springframework.http.ResponseEntity;

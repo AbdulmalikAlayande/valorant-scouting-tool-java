@@ -1,4 +1,4 @@
-package app.bola.esportsscoutingtool.controller;
+package app.bola.cloud9stratigenai.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

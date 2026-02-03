@@ -1,7 +1,7 @@
-package app.bola.esportsscoutingtool.repository;
+package app.bola.cloud9stratigenai.repository;
 
-import app.bola.esportsscoutingtool.common.repository.BaseRepository;
-import app.bola.esportsscoutingtool.model.ScoutingReport;
+import app.bola.cloud9stratigenai.common.repository.BaseRepository;
+import app.bola.cloud9stratigenai.model.ScoutingReport;
 
 import java.util.Optional;
 
@@ -12,4 +12,6 @@ import java.util.Optional;
 public interface ScoutingReportRepository extends BaseRepository<ScoutingReport, Long> {
 	
 	Optional<ScoutingReport> findByReportRequestId(Long requestId);
+
+	boolean existsByReportRequestPublicId(String publicId);
 }

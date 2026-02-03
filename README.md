@@ -1,1 +1,1 @@
-# Stratigen AI
+# Cloud9 Stratigen

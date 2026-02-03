@@ -1,6 +1,6 @@
-package app.bola.esportsscoutingtool.model;
+package app.bola.cloud9stratigenai.model;
 
-import app.bola.esportsscoutingtool.common.model.BaseModel;
+import app.bola.cloud9stratigenai.common.model.BaseModel;
 import jakarta.persistence.*;
 import lombok.*;
 

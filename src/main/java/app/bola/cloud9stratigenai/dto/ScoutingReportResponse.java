@@ -1,4 +1,4 @@
-package app.bola.esportsscoutingtool.dto;
+package app.bola.cloud9stratigenai.dto;
 
 import lombok.Builder;
 import lombok.Data;

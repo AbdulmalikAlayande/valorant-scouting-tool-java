@@ -1,8 +1,11 @@
-package app.bola.esportsscoutingtool.common;
+package app.bola.cloud9stratigenai.common;
 
-import app.bola.esportsscoutingtool.exception.ErrorResponse;
-import app.bola.esportsscoutingtool.exception.ResourceNotFoundException;
-import lombok.extern.slf4j.Slf4j;
+import app.bola.cloud9stratigenai.exception.ErrorResponse;
+import app.bola.cloud9stratigenai.exception.ReportNotFoundException;
+import app.bola.cloud9stratigenai.exception.ReportNotReadyException;
+import app.bola.cloud9stratigenai.exception.ResourceNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
