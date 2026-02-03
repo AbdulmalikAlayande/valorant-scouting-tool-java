@@ -21,8 +21,8 @@ public class ReportController {
 	
 	final ReportService reportService;
 	
-	@PostMapping("/submit")
-	public ResponseEntity<@NonNull ReportStatusResponse> submitReport(@RequestBody Object reportRequest) {
+	@PostMapping("/generate")
+	public ResponseEntity<@NonNull ReportStatusResponse> submitReport(@Valid @RequestBody GenerateReportRequest reportRequest) {
 		log.info("Received report submission: {}", reportRequest);
 		return ResponseEntity.ok().body(reportService.generateReport(reportRequest));
 	}
