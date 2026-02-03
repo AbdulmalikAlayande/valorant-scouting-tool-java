@@ -21,6 +21,9 @@ public class ReportRequest extends BaseModel {
     @Column(name = "status", nullable = false)
     private ReportStatus status = ReportStatus.PENDING;
     
+    @Column(name = "created_at")
+    private LocalDateTime createdAt = LocalDateTime.now();
+    
     @Column(name = "completed_at")
     private LocalDateTime completedAt;
     
