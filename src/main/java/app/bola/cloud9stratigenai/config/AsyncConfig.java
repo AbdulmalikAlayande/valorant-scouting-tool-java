@@ -1,4 +1,4 @@
-package app.bola.esportsscoutingtool.config;
+package app.bola.cloud9stratigenai.config;
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Bean;
