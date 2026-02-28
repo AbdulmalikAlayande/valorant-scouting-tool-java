@@ -14,12 +14,17 @@ import java.util.Optional;
  * Repository class for managing scouting reports in the Esports Scouting Tool application.
  */
 public interface ReportRequestRepository extends BaseRepository<ReportRequest, Long> {
-	
-	List<ReportRequest> findByStatusOrderByCreatedAtDesc(ReportRequest.ReportStatus status);
-	
-	Optional<ReportRequest> findFirstByStatusOrderByCreatedAtAsc(ReportRequest.ReportStatus status);
-	
-	@Query("SELECT r FROM ReportRequest r WHERE r.status = :status AND r.createdAt > :since")
-	List<ReportRequest> findRecentByStatus(@Param("status") ReportRequest.ReportStatus status, @Param("since") LocalDateTime since);
-	
+
+    List<ReportRequest> findByStatusOrderByCreatedAtDesc(ReportRequest.ReportStatus status);
+
+    Optional<ReportRequest> findFirstByStatusOrderByCreatedAtAsc(ReportRequest.ReportStatus status);
+
+    Optional<ReportRequest> findFirstByRequestHashAndStatusInOrderByCreatedAtDesc(
+            String requestHash,
+            List<ReportRequest.ReportStatus> statuses
+    );
+
+    @Query("SELECT r FROM ReportRequest r WHERE r.status = :status AND r.createdAt > :since")
+    List<ReportRequest> findRecentByStatus(@Param("status") ReportRequest.ReportStatus status, @Param("since") LocalDateTime since);
+
 }
