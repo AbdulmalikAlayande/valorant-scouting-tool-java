@@ -329,7 +329,7 @@ public class ReportServiceImpl implements ReportService {
 
     private String formatTitle(String key) {
         if (key == null || key.isEmpty()) return "";
-        return StringUtils.capitalize(key.replace("_", " ".trim()));
+        return StringUtils.capitalize(key.replace("_", " "));
     }
 
     private ErrorClassification classifyError(ReportRequest request, ReportJob reportJob) {
@@ -423,4 +423,3 @@ public class ReportServiceImpl implements ReportService {
         }
     }
 }
-
