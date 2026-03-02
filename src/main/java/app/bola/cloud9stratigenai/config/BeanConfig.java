@@ -15,10 +15,10 @@ public class BeanConfig {
 		return new ModelMapper();
 	}
 	
-	@Bean
-	public ObjectMapper objectMapper() {
-		return new ObjectMapper()
-				       .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-				       .setSerializationInclusion(JsonInclude.Include.NON_NULL);
-	}
+	// @Bean
+	// public ObjectMapper objectMapper() {
+	// 	return new ObjectMapper()
+	// 			       .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+	// 			       .setSerializationInclusion(JsonInclude.Include.NON_NULL);
+	// }
 }
